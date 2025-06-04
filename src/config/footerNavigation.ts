@@ -37,7 +37,7 @@ export const footerNavigationData: FooterData = {
 	footerAbout: {
 		title: 'Elevix Apps',
 		aboutText:
-			'Expertly made, responsive, accessible components in React and HTML ready to be used on your website or app. Just copy and paste them on your Tailwind CSS project.',
+			'Crafted for Shopify merchants. Seamless, responsive, and built for the new customer accounts—boost engagement without touching your theme.',
 		logo: {
 			src: '/logo.svg',
 			alt: 'Welcome to Elevix Apps',
