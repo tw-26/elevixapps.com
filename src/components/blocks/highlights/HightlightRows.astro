@@ -8,14 +8,16 @@
 import TextImage from '../basic/TextImage.astro'
 
 // Content
-import highlight01 from '../../../assets/highlights/highlight-01.svg'
-import highlight01mobile from '../../../assets/highlights/highlight-01-mobile.svg'
-import highlight02 from '../../../assets/highlights/highlight-02.svg'
-import highlight02mobile from '../../../assets/highlights/highlight-02-mobile.svg'
-import highlight03 from '../../../assets/highlights/highlight-03.svg'
-import highlight03mobile from '../../../assets/highlights/highlight-03-mobile.svg'
-import highlight04 from '../../../assets/highlights/highlight-04.svg'
-import highlight04mobile from '../../../assets/highlights/highlight-04-mobile.svg'
+import highlight01 from '../../../assets/highlights/highlight01.png'
+import highlight01mobile from '../../../assets/highlights/highlight01.png'
+import highlight02 from '../../../assets/highlights/highlight02.png'
+import highlight02mobile from '../../../assets/highlights/highlight02.png'
+import highlight03 from '../../../assets/highlights/highlight03.png'
+import highlight03mobile from '../../../assets/highlights/highlight03.png'
+import highlight04 from '../../../assets/highlights/highlight04.png'
+import highlight04mobile from '../../../assets/highlights/highlight04.png'
+import highlight05 from '../../../assets/highlights/highlight05.png'
+import highlight05mobile from '../../../assets/highlights/highlight05.png'
 
 type HighlightBlock = {
 	title: string
@@ -28,8 +30,8 @@ type HighlightBlock = {
 }
 const highlightBlocks: HighlightBlock[] = [
 	{
-		title: 'Complete Project <strong>Visibility</strong>',
-		text: 'Gain complete visibility into your projects and tasks with our comprehensive dashboard. Easily track progress, deadlines, and team performance at a glance. Our dashboard offers real-time project tracking',
+		title: '<strong>Capture Attention</strong> Where It Matters Most',
+		text: 'Show timely announcements directly in the new Shopify customer account pages—right where your customers are already engaged.',
 		image: highlight01,
 		imageWidth: highlight01.width,
 		imageHeight: highlight01.height,
@@ -37,8 +39,8 @@ const highlightBlocks: HighlightBlock[] = [
 		imagePosition: 'right'
 	},
 	{
-		title: 'Advanced <strong>Automation</strong> Tools',
-		text: 'Automate repetitive tasks and streamline your workflow with our advanced automation tools. Save time and reduce errors by leveraging automated task assignments, workflow templates, and seamless integration with popular apps and services.',
+		title: 'Match Your Brand with <strong>Flexible Styles</strong>',
+		text: 'Customize the look and feel of each announcement bar with multiple layout and color options—no theme edits required.',
 		image: highlight02,
 		mobileImage: highlight02mobile,
 		imageWidth: highlight02.width,
@@ -46,8 +48,8 @@ const highlightBlocks: HighlightBlock[] = [
 		imagePosition: 'left'
 	},
 	{
-		title: '<strong>Effective</strong> Team Collaboration',
-		text: 'Enhance team communication and collaboration with our seamless tools. Keep everyone on the same page and ensure efficient project execution through real-time messaging, shared document editing, and task comments. ',
+		title: '<strong>Target Specific Pages</strong> with Precision',
+		text: 'Display announcements on the order list, order detail, or profile page to deliver the right message at the right moment.',
 		image: highlight03,
 		mobileImage: highlight03mobile,
 		imageWidth: highlight03.width,
@@ -55,13 +57,22 @@ const highlightBlocks: HighlightBlock[] = [
 		imagePosition: 'right'
 	},
 	{
-		title: 'Robust Data <strong>Security</strong>',
-		text: 'Protect your data with our robust security features. We prioritize your privacy and security to ensure that your information is always safe. With end-to-end encryption, role-based access control, and regular security audits.',
+		title: 'Easy, <strong>No-Code Customization</strong>',
+		text: 'Design and manage announcements effortlessly with our intuitive admin dashboard—tailor text, links, and style with zero coding.',
 		image: highlight04,
 		mobileImage: highlight04mobile,
 		imageWidth: highlight04.width,
 		imageHeight: highlight04.height,
 		imagePosition: 'left'
+	},
+	{
+		title: 'Automate Timing with <strong>Smart Scheduling</strong>',
+		text: 'Set start and end dates for announcements to appear automatically—perfect for timed promotions, launches, or policy updates.',
+		image: highlight05,
+		mobileImage: highlight05mobile,
+		imageWidth: highlight05.width,
+		imageHeight: highlight05.height,
+		imagePosition: 'right'
 	}
 ]
 ---
