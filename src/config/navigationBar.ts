@@ -34,24 +34,33 @@ export interface NavData {
 export const navigationBarData: NavData = {
 	logo: {
 		src: '/logo.svg',
-		alt: 'The tailwind astro theme',
-		text: 'Foxi.'
+		alt: 'Welcome to Elevix Apps',
+		text: 'Elevix Apps'
 	},
 	navItems: [
 		{ name: 'Home', link: '/' },
-		{ name: 'Pricing', link: '/pricing' },
 		{ name: 'Features', link: '/features' },
-		{
-			name: 'Resources',
-			link: '#',
-			submenu: [
-				{ name: 'Blog', link: '/blog' },
-				{ name: 'Changelog', link: '/changelog' },
-				{ name: 'FAQ', link: '/faq' },
-				{ name: 'Terms', link: '/terms' }
-			]
-		},
-		{ name: 'Contact', link: '/contact' }
+		{ name: 'Pricing', link: '/pricing' },
+		{ name: 'FAQ', link: '/faq' },
+		{ name: 'Contact', link: '/contact' },
+		{ name: 'Privacy Policy', link: '/privacy-policy' }
+		// {
+		// 	name: 'Resources',
+		// 	link: '#',
+		// 	submenu: [
+		// 		{ name: 'Blog', link: '/blog' },
+		// 		{ name: 'Changelog', link: '/changelog' },
+		// 		{ name: 'FAQ', link: '/faq' },
+		// 		{ name: 'Terms', link: '/terms' }
+		// 	]
+		// },
 	],
-	navActions: [{ name: 'Try it now', link: '/', style: 'primary', size: 'lg' }]
+	navActions: [
+		{
+			name: 'Install on Shopify',
+			link: 'https://apps.shopify.com/elevix-customer-account-bar',
+			style: 'primary',
+			size: 'lg'
+		}
+	]
 }
