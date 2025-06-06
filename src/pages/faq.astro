@@ -6,49 +6,39 @@ import Layout from '../layouts/Layout.astro'
 import Hero from '../components/blocks/hero/PageHeader.astro'
 import FAQ from '../components/blocks/FAQ/FaqSticky.astro'
 import TextImage from '../components/blocks/basic/TextImage.astro'
-import CTA from '../components/blocks/CTA/BasicDark.astro'
+import CTA from '../components/blocks/CTA/BasicLight.astro'
 
 // Data
 import faqData from '../data/json-files/faqData.json'
-// - FAQ Categories
-const faqPricing = faqData.filter((faq) => faq.category === 'pricing')
-const faqIntegrations = faqData.filter((faq) => faq.category === 'integrations')
 
-// Content
-import faqImage1 from '../assets/faq/faq-01.png'
+// FAQ Categories
+const faqGettingStarted = faqData.filter((faq) => faq.category === 'Getting Started')
+const faqFeatures = faqData.filter((faq) => faq.category === 'Features & Customization')
+const faqManagement = faqData.filter((faq) => faq.category === 'Managing Announcements')
+const faqTroubleshooting = faqData.filter((faq) => faq.category === 'Troubleshooting')
+const faqTechnical = faqData.filter((faq) => faq.category === 'Technical & Performance')
+const faqGeneral = faqData.filter((faq) => faq.category === 'General & Support')
+
 // - SEO
 const SEO = {
-	title: 'Foxi | Get Your Questions Answered with a Smile',
+	title: 'Elevix FAQs & Setup Guide – Shopify Customer Announcements',
 	description:
-		'Dive into the Foxi FAQ Funhouse to get answers to all your questions about pricing, integrations, features, and more. Discover how Foxi can make your work life more productive and enjoyable.'
+		'Learn how to use Elevix to add and schedule announcement bars in Shopify customer accounts. Setup instructions, scheduling tips, and full FAQ included.'
 }
 // - Page Header
 const header = {
-	title: 'Get Answers to Your <strong>Foxi</strong> Questions.',
-	text: 'Find answers to common questions about Foxi '
+	title: '<strong>Elevix</strong> Help & FAQs',
+	text: 'Learn how to use Elevix to add and schedule announcement bars in Shopify customer accounts. Setup instructions, scheduling tips, and full FAQ included.'
 }
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
 	<Hero title={header.title} text={header.text} />
-	<FAQ
-		title="Understanding Our Pricing Plans"
-		text="Get all the details on Foxi’s pricing plans. Learn about the costs, discounts, and subscription options to find the best plan that fits your needs and budget."
-		data={faqPricing}
-	/>
-	<TextImage
-		title="Why Foxi’s Pricing Plans Offer Great Value"
-		text="At Foxi, we believe in providing exceptional value at every price point. Our pricing plans are designed to cater to a variety of needs, from individuals and small teams to large enterprises. Each plan includes access to our powerful features, seamless integrations, and top-notch customer support. "
-		image={faqImage1}
-		mobileImage={faqImage1}
-		imagePosition="left"
-		offsetImage
-		classes="bg-neutral-50 dark:bg-neutral-900 lg:!py-64"
-	/>
-	<FAQ
-		title="Integrations Made Easy"
-		text="Discover how Foxi seamlessly integrates with your favorite tools and platforms. From Google Calendar to Slack, find out how to connect and enhance your productivity with powerful integrations."
-		data={faqIntegrations}
-	/>
+	<FAQ title="Getting Started" text="" data={faqGettingStarted} />
+	<FAQ title="Features & Customization" text="" data={faqFeatures} />
+	<FAQ title="Managing Announcements" text="" data={faqManagement} />
+	<FAQ title="Troubleshooting" text="" data={faqTroubleshooting} />
+	<FAQ title="Technical & Performance" text="" data={faqTechnical} />
+	<FAQ title="General & Support" text="" data={faqGeneral} />
 	<CTA />
 </Layout>
