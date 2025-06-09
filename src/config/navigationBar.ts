@@ -42,7 +42,7 @@ export const navigationBarData: NavData = {
 		// { name: 'Features', link: '/features' },
 		{ name: 'Pricing', link: '/pricing' },
 		{ name: 'FAQ', link: '/faq' },
-		{ name: 'Contact', link: '/contact' },
+		{ name: 'Contact', link: 'https://tally.so/r/3qvqL2' },
 		{ name: 'Privacy Policy', link: '/privacy-policy' }
 		// {
 		// 	name: 'Resources',

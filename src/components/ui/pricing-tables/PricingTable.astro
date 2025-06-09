@@ -27,7 +27,7 @@ import Footer from './partials/Footer.astro'
 
 // Props
 type PricingTableProps = {
-	type:'basic' | 'featured'
+	type: 'basic' | 'featured'
 	header: {
 		title: string
 		subtitle: string
@@ -60,7 +60,7 @@ const { type, header, body, footer } = data
 <div
 	id={id}
 	class:list={[
-		'pricing pricing--annualy',
+		'pricing pricing--annualy centered-pricing',
 		{ [`pricing--${type}`]: type },
 		{ [`${classes}`]: classes }
 	]}
@@ -100,7 +100,7 @@ const { type, header, body, footer } = data
 				</h4>
 			</div>
 
-			<Button
+			<!-- <Button
 				size="lg"
 				style={type === 'featured' ? 'secondary' : 'primary'}
 				elevated
@@ -108,7 +108,7 @@ const { type, header, body, footer } = data
 				link={header.buttonLink}
 			>
 				{header.buttonName}
-			</Button>
+			</Button> -->
 		</Header>
 
 		{

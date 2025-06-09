@@ -72,7 +72,7 @@ export const footerNavigationData: FooterData = {
 			subCategories: [
 				{
 					subCategory: 'Contact',
-					subCategoryLink: '/contact'
+					subCategoryLink: 'https://tally.so/r/3qvqL2'
 				}
 			]
 		}
