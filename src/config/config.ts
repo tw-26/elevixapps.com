@@ -21,16 +21,16 @@ export interface Config {
 }
 
 export const configData: Config = {
-	siteTitle: 'Foxi. Tailwind CSS Astro Starter Kit by Oxygenna',
+	siteTitle: 'Elevix – Smart Announcement Bars for Shopify',
 	siteDescription:
-		'Foxi is a design and development agency that specializes in creating beautiful and functional websites.',
-	ogImage: '/og.jpg',
+		'Elevix helps Shopify merchants display targeted announcements inside customer account pages to drive sales, reduce support, and boost retention.',
+	ogImage: '/og.png',
 	logo: {
 		src: '/logo.svg',
-		alt: 'Foxi. logo'
+		alt: 'Elevix app logo'
 	},
-	canonical: true,
-	noindex: false,
-	mode: 'auto',
-	scrollAnimations: true
+	canonical: true, // ✅ Enables <link rel="canonical"> for SEO
+	noindex: false, // ✅ Make sure this is false for production
+	mode: 'auto', // Light/dark auto mode
+	scrollAnimations: true // Use only if animations are actually used
 }

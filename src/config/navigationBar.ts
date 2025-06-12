@@ -43,8 +43,8 @@ export const navigationBarData: NavData = {
 		{ name: 'Pricing', link: '/pricing' },
 		{ name: 'Use Cases', link: '/use-cases' },
 		{ name: 'FAQ', link: '/faq' },
-		{ name: 'Contact', link: 'https://tally.so/r/3qvqL2' },
-		{ name: 'Privacy Policy', link: '/privacy-policy' }
+		{ name: 'Privacy Policy', link: '/privacy-policy' },
+		{ name: 'Contact', link: 'https://tally.so/r/3qvqL2' }
 		// {
 		// 	name: 'Resources',
 		// 	link: '#',
