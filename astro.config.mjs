@@ -6,7 +6,7 @@ import icon from "astro-icon";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://foxi.netlify.app/",
+  site: "https://elevixapps.com/",
   integrations: [
     tailwind(),
     icon(),
