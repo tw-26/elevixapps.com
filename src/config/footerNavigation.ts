@@ -37,7 +37,7 @@ export const footerNavigationData: FooterData = {
 	footerAbout: {
 		title: 'Elevix Apps',
 		aboutText:
-			'Crafted for Shopify merchants. Seamless, responsive, and built for the new customer accounts—boost engagement without touching your theme.',
+			'Get notified when your inventory is running low. Automate stock alerts and never run out of stock again.',
 		logo: {
 			src: '/logo.svg',
 			alt: 'Welcome to Elevix Apps',
@@ -46,37 +46,11 @@ export const footerNavigationData: FooterData = {
 	},
 	footerColumns: [
 		{
-			category: 'Product',
-			subCategories: [
-				{
-					subCategory: 'Pricing',
-					subCategoryLink: '/pricing'
-				},
-				{
-					subCategory: 'Use Cases',
-					subCategoryLink: '/use-cases'
-				},
-				{
-					subCategory: 'FAQ',
-					subCategoryLink: '/faq'
-				}
-			]
-		},
-		{
 			category: 'Company',
 			subCategories: [
 				{
 					subCategory: 'Privacy Policy',
 					subCategoryLink: '/privacy-policy'
-				}
-			]
-		},
-		{
-			category: 'Get in touch',
-			subCategories: [
-				{
-					subCategory: 'Contact',
-					subCategoryLink: 'https://tally.so/r/3qvqL2'
 				}
 			]
 		}

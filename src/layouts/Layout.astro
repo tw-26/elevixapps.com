@@ -30,8 +30,37 @@ const { title, description, ogImage, noindex, classes } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-animation mode-auto relative">
+<html lang="en" class="scroll-animation relative" data-theme="auto">
 	<Header title={title} description={description} ogImage={ogImage} noindex={noindex} />
+
+	<!-- Critical theme script - must be blocking and inline to prevent FOUC -->
+	<script is:inline>
+		// Apply saved theme immediately to prevent flash
+		;(function () {
+			try {
+				const savedTheme = localStorage.getItem('theme')
+				const html = document.documentElement
+
+				// Remove all theme classes first
+				html.classList.remove('dark', 'light')
+
+				// Apply theme based on saved preference or system preference
+				if (savedTheme === 'dark') {
+					html.classList.add('dark')
+				} else if (savedTheme === 'light') {
+					html.classList.add('light')
+				} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					html.classList.add('dark')
+				}
+			} catch (e) {
+				// Fallback: if localStorage fails, use system preference
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					document.documentElement.classList.add('dark')
+				}
+			}
+		})()
+	</script>
+
 	<body
 		class:list={[
 			{ ['mode-' + `${configData.mode}`]: configData.mode },

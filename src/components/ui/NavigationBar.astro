@@ -100,11 +100,10 @@ const savedNavActions = navActions.map((action) => ({
 				}
 			</ul>
 
-			<!-- Theme Switcher -->
-			<Switcher />
-
 			<!-- Navigation action buttons -->
 			<div class="header__actions">
+				<!-- Theme Switcher -->
+				<Switcher />
 				{
 					savedNavActions.map((action) => (
 						<Button classes="flex-auto" size={action.size} style={action.style} link={action.link}>

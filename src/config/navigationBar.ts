@@ -39,27 +39,12 @@ export const navigationBarData: NavData = {
 	},
 	navItems: [
 		{ name: 'Home', link: '/' },
-		// { name: 'Features', link: '/features' },
-		{ name: 'Pricing', link: '/pricing' },
-		{ name: 'Use Cases', link: '/use-cases' },
-		{ name: 'FAQ', link: '/faq' },
-		{ name: 'Privacy Policy', link: '/privacy-policy' },
-		{ name: 'Contact', link: 'https://tally.so/r/3qvqL2' }
-		// {
-		// 	name: 'Resources',
-		// 	link: '#',
-		// 	submenu: [
-		// 		{ name: 'Blog', link: '/blog' },
-		// 		{ name: 'Changelog', link: '/changelog' },
-		// 		{ name: 'FAQ', link: '/faq' },
-		// 		{ name: 'Terms', link: '/terms' }
-		// 	]
-		// },
+		{ name: 'Privacy Policy', link: '/privacy-policy' }
 	],
 	navActions: [
 		{
 			name: 'Install on Shopify',
-			link: 'https://apps.shopify.com/elevix-customer-account-bar',
+			link: 'https://apps.shopify.com/low-stock-alert-app',
 			style: 'primary',
 			size: 'lg'
 		}

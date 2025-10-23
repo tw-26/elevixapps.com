@@ -1,97 +1,87 @@
 ---
 // Components
 import Layout from '../layouts/Layout.astro'
-import SidebarContent from '../components/blocks/basic/StickySidebar.astro'
-import Hero from '../components/blocks/hero/PageHeader.astro'
+import Section from '../components/ui/Section.astro'
+import Row from '../components/ui/Row.astro'
+import Col from '../components/ui/Col.astro'
 
 const SEO = {
-	title: 'Elevix Apps | Privacy Policy',
+	title: 'Privacy Policy - Elevix Low Stock Alert App | Data Protection & Security',
 	description:
-		"Learn how Elevix Apps handles store information, protects your privacy, and complies with Shopify's data policies."
-}
-
-const header = {
-	title: 'Your Privacy Matters:<br/> <strong>Our Commitment</strong>',
-	text: 'Understand how Elevix Apps collects, uses, and protects your store information.'
+		"Learn how Elevix Low Stock Alert handles store information, protects your privacy, and complies with Shopify's data policies. We only collect essential store data for inventory monitoring."
 }
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
-	<Hero title={header.title} text={header.text} />
+	<Section id="privacy-policy" padding="both" classes="bg-neutral-50 dark:bg-neutral-900">
+		<Row>
+			<Col span="2" />
+			<Col span="8">
+				<h1 class="mb-6 text-4xl font-bold text-neutral-900 dark:text-neutral-100">
+					Your Privacy Matters: <strong>Our Commitment</strong>
+				</h1>
+				<p class="mb-12 text-lg text-neutral-700 dark:text-neutral-300">
+					Understand how Elevix Apps collects, uses, and protects your store information.
+				</p>
 
-	<SidebarContent>
-		<div slot="sidebar">
-			<h3>Overview</h3>
-			<p>
-				This Privacy Policy explains how Elevix Apps collects, uses, and protects store information
-				when you install or use our Shopify app.
-			</p>
-		</div>
-		<div class="basic-text">
-			<h4>Information We Collect</h4>
-			<p>
-				When you install Elevix, we automatically access the following store information provided by
-				Shopify:
-			</p>
-			<ul>
-				<li>Store name</li>
-				<li>Store domain</li>
-				<li>Store email</li>
-			</ul>
-			<p>
-				We do <strong>not</strong> collect customer data, payment information, or any personal data beyond
-				what Shopify provides during app installation.
-			</p>
+				<div class="prose prose-lg prose-neutral max-w-none dark:prose-invert">
+					<h2>Overview</h2>
+					<p>
+						This Privacy Policy explains how Elevix Apps collects, uses, and protects store
+						information when you install or use our Shopify app.
+					</p>
 
-			<h4>How We Use Your Information</h4>
-			<p>We use your store data only to:</p>
-			<ul>
-				<li>Deliver and maintain app functionality</li>
-				<li>Identify your store for support and troubleshooting</li>
-				<li>Ensure proper licensing and access control</li>
-			</ul>
-			<p>
-				We do <strong>not</strong> sell, rent, or share your data with any third parties.
-			</p>
-		</div>
-	</SidebarContent>
+					<h2>Information We Collect</h2>
+					<p>
+						When you install Elevix, we automatically access the following store information
+						provided by Shopify:
+					</p>
+					<ul>
+						<li>Store name</li>
+						<li>Store domain</li>
+						<li>Store email</li>
+					</ul>
+					<p>
+						We do <strong>not</strong> collect customer data, payment information, or any personal data
+						beyond what Shopify provides during app installation.
+					</p>
 
-	<SidebarContent classes="bg-neutral-50 dark:bg-neutral-900">
-		<div slot="sidebar">
-			<h3>Your Rights</h3>
-			<p>
-				As a merchant, you have full rights to control your store data. Learn how to access or
-				request changes to your information.
-			</p>
-		</div>
-		<div class="basic-text">
-			<h4>Access and Correction</h4>
-			<p>
-				You may request access to the store information we hold, and you have the right to correct
-				or delete it at any time.
-			</p>
-			<p>
-				To make such a request, please email us at <a href="mailto:support@elevixapps.com"
-					>support@elevixapps.com</a
-				>.
-			</p>
+					<h2>How We Use Your Information</h2>
+					<p>We use your store data only to:</p>
+					<ul>
+						<li>Deliver and maintain app functionality</li>
+						<li>Identify your store for support and troubleshooting</li>
+						<li>Ensure proper licensing and access control</li>
+					</ul>
+					<p>
+						We do <strong>not</strong> sell, rent, or share your data with any third parties.
+					</p>
 
-			<h4>Data Retention</h4>
-			<p>
-				We retain your store data only as long as necessary to provide the app's functionality or as
-				required by law. When you uninstall Elevix, your store data is automatically removed.
-			</p>
-		</div>
-	</SidebarContent>
+					<h2>Your Rights</h2>
+					<h3>Access and Correction</h3>
+					<p>
+						You may request access to the store information we hold, and you have the right to
+						correct or delete it at any time.
+					</p>
+					<p>
+						To make such a request, please email us at <a href="mailto:support@elevixapps.com"
+							>support@elevixapps.com</a
+						>.
+					</p>
 
-	<SidebarContent>
-		<div slot="sidebar">
-			<h3>Contact Us</h3>
-			<p>Have questions about your data or this Privacy Policy? We're here to help.</p>
-		</div>
-		<div class="basic-text">
-			<h4>Contact Information</h4>
-			<p>Email: <a href="mailto:support@elevixapps.com">support@elevixapps.com</a></p>
-		</div>
-	</SidebarContent>
+					<h3>Data Retention</h3>
+					<p>
+						We retain your store data only as long as necessary to provide the app's functionality
+						or as required by law. When you uninstall Elevix, your store data is automatically
+						removed.
+					</p>
+
+					<h2>Contact Us</h2>
+					<p>Have questions about your data or this Privacy Policy? We're here to help.</p>
+					<p>Email: <a href="mailto:support@elevixapps.com">support@elevixapps.com</a></p>
+				</div>
+			</Col>
+			<Col span="2" />
+		</Row>
+	</Section>
 </Layout>

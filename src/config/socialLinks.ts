@@ -1,27 +1,5 @@
-// Social Links
+// Social Links Configuration
 // ------------
-// Description: The social links data for the website.
+// Description: Social media links for the website.
 
-export interface SocialLink {
-	name: string
-	link: string
-	icon: string
-}
-
-export const socialLinks: SocialLink[] = [
-	{
-		name: 'facebook',
-		link: '/',
-		icon: 'fb-icon'
-	},
-	{
-		name: 'twitter',
-		link: '/',
-		icon: 'twitter-icon'
-	},
-	{
-		name: 'discord',
-		link: '/',
-		icon: 'discord-icon'
-	}
-]
+export const socialLinks = []

@@ -1,8 +1,6 @@
-// Google tracking
-// - Google Site Verification: for Google Search Console
-// - Google Analytics Measurement ID: for Google Analytics
-// - Google Tag Manager ID: for Google Tag Manager
+// Analytics Configuration
+// ------------
+// Description: Analytics configuration for the website.
 
-export const googleSiteVerification = ''
-export const googleAnalyticsMeasurementID = 'G-6JT3PTTD25'
+export const googleAnalyticsMeasurementID = ''
 export const googleTagManagerID = ''

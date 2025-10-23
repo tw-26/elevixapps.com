@@ -21,16 +21,16 @@ export interface Config {
 }
 
 export const configData: Config = {
-	siteTitle: 'Elevix – Smart Announcement Bars for Shopify',
+	siteTitle: 'Elevix Low Stock Alert - Daily Email Alerts for Shopify Stores',
 	siteDescription:
-		'Elevix helps Shopify merchants display targeted announcements inside customer account pages to drive sales, reduce support, and boost retention.',
+		'Daily low-stock alerts by email to prevent stockouts and missed sales. Automatic inventory monitoring for busy store owners. Set custom stock thresholds per product or store-wide.',
 	ogImage: '/og.png',
 	logo: {
 		src: '/logo.svg',
-		alt: 'Elevix app logo'
+		alt: 'Elevix Low Stock Alert App Logo'
 	},
 	canonical: true, // ✅ Enables <link rel="canonical"> for SEO
 	noindex: false, // ✅ Make sure this is false for production
 	mode: 'auto', // Light/dark auto mode
-	scrollAnimations: true // Use only if animations are actually used
+	scrollAnimations: false // Disabled for minimal site
 }
