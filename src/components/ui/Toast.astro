@@ -10,14 +10,14 @@
 // - UI
 ---
 
-<div id="foxi-toast" class="toast" style="display: none">
+<div id="elevix-toast" class="toast" style="display: none">
 	<div class="toast__container" role="status">
 		<!-- Heading with close button -->
 		<div class="toast__heading">
 			<!-- Headline -->
-			<h3 class="toast__headline">Built for Merchants Who Want More From Customer Accounts</h3>
+			<h3 class="toast__headline">Never Miss a Sale with Low Stock Alerts</h3>
 			<!-- Close button -->
-			<button aria-label="Close" class="toast__close-button" id="foxi-toast-close">
+			<button aria-label="Close" class="toast__close-button" id="elevix-toast-close">
 				<span class="toast__close-button-icon">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -35,11 +35,10 @@
 		<!-- Body -->
 		<div class="toast__body">
 			<p>
-				Elevix helps you do more than just send messages. It’s built to boost retention, reduce
-				support, and turn post-purchase touchpoints into sales moments — all with no dev work. <br
-				/>
+				Get daily email alerts when your inventory runs low. Prevent stockouts and missed sales with
+				automatic monitoring. Set custom thresholds per product or store-wide. <br />
 				<a
-					href="https://apps.shopify.com/elevix-announcement-bar"
+					href="https://apps.shopify.com/low-stock-alert-app"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
@@ -80,8 +79,8 @@
 
 	<script is:inline>
 		function initializeToast() {
-			const toast = document.getElementById('foxi-toast')
-			const closeButton = document.getElementById('foxi-toast-close')
+			const toast = document.getElementById('elevix-toast')
+			const closeButton = document.getElementById('elevix-toast-close')
 
 			if (!toast) return // Don't run if toast isn't present
 
@@ -94,13 +93,13 @@
 			// Function to hide the toast and store dismissal time
 			function hideToast() {
 				toast.style.display = 'none'
-				localStorage.setItem('foxiToastDismissed', Date.now())
+				localStorage.setItem('elevixToastDismissed', Date.now())
 				toast.classList.remove('toast--show')
 			}
 
 			// Check if toast should be shown
 			function checkToastEligibility() {
-				const lastDismissed = localStorage.getItem('foxiToastDismissed')
+				const lastDismissed = localStorage.getItem('elevixToastDismissed')
 
 				if (!lastDismissed) {
 					setTimeout(showToast, 3000)
