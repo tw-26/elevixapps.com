@@ -1,5 +1,5 @@
 <!-- Scripts for UI components -->
-<script async defer>
+<script is:inline async defer>
 	document.addEventListener('astro:page-load', () => {
 		// Menu Dropdown
 		const menuItems = document.querySelectorAll('.header__menu-item')
@@ -129,18 +129,20 @@
 			themeSwitcher.replaceWith(themeSwitcher.cloneNode(true))
 			const newThemeSwitcher = document.getElementById('theme-selector')
 
-			newThemeSwitcher.addEventListener('click', () => {
-				const currentTheme = localStorage.getItem('theme')
-				const isDark = document.documentElement.classList.contains('dark')
+			if (newThemeSwitcher) {
+				newThemeSwitcher.addEventListener('click', () => {
+					const currentTheme = localStorage.getItem('theme')
+					const isDark = document.documentElement.classList.contains('dark')
 
-				if (currentTheme === 'dark' || isDark) {
-					localStorage.setItem('theme', 'light')
-					document.documentElement.classList.remove('dark')
-				} else {
-					localStorage.setItem('theme', 'dark')
-					document.documentElement.classList.add('dark')
-				}
-			})
+					if (currentTheme === 'dark' || isDark) {
+						localStorage.setItem('theme', 'light')
+						document.documentElement.classList.remove('dark')
+					} else {
+						localStorage.setItem('theme', 'dark')
+						document.documentElement.classList.add('dark')
+					}
+				})
+			}
 		}
 	}
 

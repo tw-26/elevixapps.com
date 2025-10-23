@@ -55,7 +55,7 @@ const { title, description, ogImage, canonical, noindex } = Astro.props
 	{noindex && <meta name="robots" content="noindex,nofollow" />}
 
 	<!-- Structured Data for App -->
-	<script type="application/ld+json">
+	<script is:inline type="application/ld+json">
 		{
 			"@context": "https://schema.org",
 			"@type": "SoftwareApplication",
