@@ -17,4 +17,9 @@ export default defineConfig({
       },
     }),
   ],
+  redirects: {
+    "/use-cases": "/",
+    "/faq": "/",
+    "/pricing": "/",
+  },
 });

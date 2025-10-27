@@ -34,11 +34,11 @@ const { title, description, ogImage, canonical, noindex } = Astro.props
 	<meta property="og:site_name" content="Elevix Apps" />
 
 	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image" />
-	<meta property="twitter:url" content={Astro.url} />
-	<meta property="twitter:title" content={title} />
-	<meta property="twitter:description" content={description} />
-	<meta property="twitter:image" content={ogImage} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:url" content={Astro.url} />
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content={ogImage} />
 
 	<!-- Additional SEO Meta Tags -->
 	<meta
@@ -46,15 +46,33 @@ const { title, description, ogImage, canonical, noindex } = Astro.props
 		content="Shopify app, low stock alert, inventory management, stock alerts, email notifications, inventory monitoring, stockout prevention, Shopify store management"
 	/>
 	<meta name="author" content="Elevix Apps" />
-	<meta name="robots" content="index, follow" />
+	<meta
+		name="robots"
+		content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+	/>
 	<meta name="language" content="English" />
 	<meta name="revisit-after" content="7 days" />
+	<meta name="geo.region" content="US" />
+	<meta name="geo.placename" content="United States" />
 
 	<!-- Canonical URL -->
 	{canonical && <link rel="canonical" href={Astro.url} />}
 	{noindex && <meta name="robots" content="noindex,nofollow" />}
 
-	<!-- Structured Data for App -->
+	<!-- Structured Data - Organization -->
+	<script is:inline type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "Elevix Apps",
+			"url": "https://elevixapps.com",
+			"logo": "https://elevixapps.com/logo.svg",
+			"description": "Shopify apps for inventory management and store optimization",
+			"sameAs": ["https://apps.shopify.com/low-stock-alert-app"]
+		}
+	</script>
+
+	<!-- Structured Data - Software Application -->
 	<script is:inline type="application/ld+json">
 		{
 			"@context": "https://schema.org",
@@ -63,15 +81,34 @@ const { title, description, ogImage, canonical, noindex } = Astro.props
 			"description": "Daily low-stock alerts by email to prevent stockouts and missed sales. Automatic inventory monitoring for busy store owners.",
 			"applicationCategory": "BusinessApplication",
 			"operatingSystem": "Shopify",
+			"url": "https://apps.shopify.com/low-stock-alert-app",
 			"offers": {
 				"@type": "Offer",
 				"price": "0",
-				"priceCurrency": "USD"
+				"priceCurrency": "USD",
+				"availability": "https://schema.org/InStock"
 			},
 			"aggregateRating": {
 				"@type": "AggregateRating",
 				"ratingValue": "4.8",
-				"ratingCount": "150"
+				"ratingCount": "150",
+				"bestRating": "5",
+				"worstRating": "1"
+			}
+		}
+	</script>
+
+	<!-- Structured Data - WebSite -->
+	<script is:inline type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "Elevix Apps",
+			"url": "https://elevixapps.com",
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://elevixapps.com/?s={search_term_string}",
+				"query-input": "required name=search_term_string"
 			}
 		}
 	</script>
